@@ -13,7 +13,7 @@ lata18 = litros / 18
 if litros % 18 == 0:
     lata18 = litros / 18
 else:
-    lata18  = round(lata18+0.5)
+    lata18 = round(lata18 + 0.5)
 
 valor = lata18 * 80
 print(f"Quantidade de latas {lata18}")

@@ -11,3 +11,32 @@
      ->misturar latas e galões, de forma que o desperdício de tinta seja menor. Acrescente 10%
        de folga e sempre arredonde os valores para cima, isto é, considere latas cheias.
 """
+
+area = int(input("Digite, em metros quadrados (m²), a area a ser pintada: "))
+litros = (area / 6) * 1.1
+print(f'-> Litros de tinta: {litros:.2f}lt')
+print()
+# considerando latas cheias
+print("#Considerando somente latas de 18lt e 3.6lts cheias#")
+# galao 18 litros
+if litros % 18 == 0:
+    galao18 = litros / 18
+    print(f'Galão de 18lt {galao18:.2f}')
+else:
+    galao18_cheio = round((litros / 18) + 0.5)
+    print(f'Galão de 18lt {galao18_cheio:.2f}')
+
+# Galao de 3.6 litros
+if litros % 3.6 == 0:
+    galao3_6 = litros / 3.6
+else:
+    galao3_6 = round((litros / 3.6) + 0.5)
+print(f'Galão de 3.6lt {galao3_6:.0f}')
+print()
+print("#Misturando latas 18 e latas de 3.6 litros, para ter o menor desperdício#")
+resto_galao18 = litros % 18
+galao_18 = int(litros / 18)
+gal3_6_junto_galao18 = round((resto_galao18 / 3.6) + 0.5)
+if galao_18 > 0:
+    print(f'Galão de 18lt {galao_18}')
+print(f'Galão de 3.6lt {gal3_6_junto_galao18}')
