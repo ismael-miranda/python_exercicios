@@ -8,9 +8,9 @@ velocidade = int(input("Informe a velocidade da internet: "))
 
 tempo = arquivo / (velocidade / 8)
 print(f"Tempo em segundos: {tempo:.0f}")
-hora = int(tempo / 3600)
+hora = tempo // 3600
 resto_hora = tempo % 3600
-min = int(resto_hora / 60)
+min = resto_hora // 60
 segundos = resto_hora % 60
 
 if hora > 0:
